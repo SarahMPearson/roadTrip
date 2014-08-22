@@ -1,10 +1,10 @@
-## name of project
+## roadTrip
 ### Code Badges
-build status icon
-coverage status icon
+[![Build Status](https://travis-ci.org/SarahMPearson/roadTrip.svg)](https://travis-ci.org/SarahMPearson/roadTrip)
+[![Coverage Status](https://coveralls.io/repos/SarahMPearson/roadTrip/badge.png)](https://coveralls.io/r/SarahMPearson/roadTrip)
 
 ### About
-write a description about your project
+Taking a road trip?  This is the app for you.  You can add stops and photos and know approx how much gas money you'll need.
 
 ### Models
 ```
@@ -33,9 +33,6 @@ prop-f
 $ npm install
 $ npm test
 ```
-
-### Contributors
-- [Chyld Medford](https://github.com/chyld)
 
 ### License
 [MIT](LICENSE)
