@@ -1,0 +1,43 @@
+extends ../shared/template
+block content
+  h2 Home
+  .row
+    .col-xs-12
+  .panel.panel-default
+    .panel-body
+      h4 Create A New Trip
+        form(role='form', method='post', action='/trips')
+          .form-group
+            label(for='tripName') Trip Name
+            input#tripName.form-control(type='text', name='tripName', placeholder='New York, NY 2014')
+          .form-group
+            label(for='cash') Money for the Trip
+            input#cash.form-control(type='number', name='cash', placeholder='200')
+          .form-group
+            label(for='start') Starting Point
+            input#start.form-control(type='text', name='start', placeholder='Denver')
+            input#startLat(type='hidden', name='startLat')
+            input#startLng(type='hidden', name='startLng')
+          .form-group
+            label(for='startD') Start Date
+            input#startD.form-control(type='date', placeholder='start', name='startD')
+          .form-group
+            label(for='end') End Point
+            input#end.form-control(type='text', name='end', placeholder='Seattle')
+            input#endLat(type='hidden', name='endLat')
+            input#endLng(type='hidden', name='endLng')
+          .form-group
+            label(for='endD') End Date
+            input#endD.form-control(type='date', placeholder='end', name='endD')
+          .form-group
+            label(for='mpg') MPG
+            input#mpg.form-control(type='number', name='mpg', placeholder='24')
+          .form-group
+            label(for='gasCost') Gas Cost
+            input#gasCost(type='number', step='any', name='gasCost', placeholder='3.10')
+          button.btn.btn-default(type='submit') Save Trip
+
+
+block scripts
+  script(src='/js/user/newTrip.js')
+
