@@ -1,18 +1,30 @@
 extends ../shared/template
 block content
-  h2 Home
-  .panel.panel-default
-    .panel-body
-      h4 Bootstrap Themes and Templates
-      ul
-        li: a(href='http://bootswatch.com/', target='_blank') http://bootswatch.com/
-        li: a(href='http://bootstrapzero.com/', target='_blank') http://bootstrapzero.com/
-        li: a(href='http://startbootstrap.com/', target='_blank') http://startbootstrap.com/
-        li: a(href='http://www.prepbootstrap.com/', target='_blank') http://www.prepbootstrap.com/
-        li: a(href='http://www.blacktie.co/', target='_blank') http://www.blacktie.co/
-        li: a(href='https://bootstrapmaster.com/', target='_blank') https://bootstrapmaster.com/
-        li: a(href='http://bootstrapstyler.com/', target='_blank') http://bootstrapstyler.com/
+  h2= trip.tripName
+  .row
+    .col-xs-12
+      #map
+  .row
+    .col-xs-4
+      h2 Start
+        h4= trip.start
+    .col-xs-4
+      h2 End
+        h4= trip.end
+    .col-xs-4
+      h2 Photo
+      .photo.thumbnail(style='background-image:url(#{trip.photo});')
+    .col-xs-6
+      form(role='form', method='post', action='/trips/#{trip._id}/stops')
+      .form-group
+        button.btn.btn-success#add-stop(type='button') Add Stop
+      .form-group.stop-group
+        input.form-control.stops(type='text', name='stops')
+        button.btn.btn-primary(type='submit') Add Stops to Trip
+    .col-xs-6
+
+
 
 block scripts
-  script(src='/js/user/home.js')
+  script(src='/js/user/show3.js')
 

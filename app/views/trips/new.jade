@@ -1,12 +1,11 @@
 extends ../shared/template
 block content
-  h2 Home
+  h2 Create A New Trip
   .row
-    .col-xs-12
+    .col-xs-6
   .panel.panel-default
-    .panel-body
-      h4 Create A New Trip
-        form(role='form', method='post', action='/trips')
+    .col-xs-6
+        form(role='form', method='post', action='/trips', enctype='multipart/form-data')
           .form-group
             label(for='tripName') Trip Name
             input#tripName.form-control(type='text', name='tripName', placeholder='New York, NY 2014')
@@ -34,9 +33,12 @@ block content
             input#mpg.form-control(type='number', name='mpg', placeholder='24')
           .form-group
             label(for='gasCost') Gas Cost
+            br
             input#gasCost(type='number', step='any', name='gasCost', placeholder='3.10')
+          .form-group
+            label(for='photo') Upload Photo of Your Car
+            input.form-control#photo(type='file', name='photo')
           button.btn.btn-default(type='submit') Save Trip
-
 
 block scripts
   script(src='/js/user/newTrip.js')

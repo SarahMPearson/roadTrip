@@ -1,0 +1,39 @@
+{
+  "_id":{"$oid":"000000000000000000000001"},
+  "tripName":"Nashville",
+  "cash":100,
+  "start":'Denver',
+  "startLat":39.73,
+  "startLng":-104.98,
+  "startD":{"$date":1374617413000},
+  "end":"Nashville",
+  "endLat":36.16,
+  "endLng":-86.78,
+  "endD":{"$date":1375135813000},
+  "distance":1789.07087332,
+  "mpg":36,
+  "stops":0,
+  "gasCost": 3.50,
+  "photos": 0,
+  "events": 0
+}
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "tripName":"Los Angeles",
+  "cash":600,
+  "start":'Nashville',
+  "startLat":36.16,
+  "startLng":-86.78,
+  "startD":{"$date":1408831813000},
+  "end":"Los Angeles",
+  "endLat":34.05,
+  "endLng":-118.25,
+  "endD":{"$date":1411510213000},
+  "distance":1789.07087332,
+  "mpg":24,
+  "stops":0,
+  "gasCost": 3.50,
+  "photos": 0,
+  "events": 0
+}
+
